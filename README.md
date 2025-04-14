@@ -49,6 +49,8 @@ Abaixo deixo um guia de como configurar uma distribuição de vídeo segura usan
    - Pode manter `Use only US, Canada and Europe` para testar.
 6. Clique em **Create distribution**.
 
+> PS: Ao criar, uma URL será gerada para a sua distribuição, copie essa URL e cole no seu arquivo `.env` em `AWS_CLOUDFRONT_URL`
+
 ---
 
 ### 🔐 3. Gerar chave pública e privada para Signed URLs
@@ -77,6 +79,7 @@ openssl rsa -pubout -in private_key.pem -out public_key.pem
 -----END PUBLIC KEY-----
 ```
 4. Clique em Create public key
+> PS: Copie o ID dessa chave que foi gerada e cole no seu arquivo `.env` em `AWS_KEY_PAIR_ID`
 
 ---
 
